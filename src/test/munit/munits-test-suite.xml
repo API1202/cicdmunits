@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="munits-test-suite.xml" />
+	<!-- <munit:test name="munits-test-suite-munitsFlowTest" doc:id="cd80b631-a25f-4d0f-b843-f373b5c9677e" description="Test" ignore="true">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock when" doc:id="271d40cb-9b42-47c7-a6c5-6ad1ad8d3f56" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="f462cd2f-9844-41f3-9755-7c205183a703" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value='#[%dw 2.0&#10;output application/json&#10;-&#45;&#45;&#10;{"Hello":"Hi"}]' />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to munitsFlow" doc:id="1b30912b-6b9b-4874-a05e-dd853c772229" name="munitsFlow"/>
+		</munit:execution>
+	</munit:test> -->
+
+
+</mule>
