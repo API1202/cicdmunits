@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="7f205e02-81d5-4c6b-85d2-b9a02910d029" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="2807060a-0180-48e5-87f2-69e810ecd3a7" >
+		<http:request-connection host="localhost" port="8091"/>
+	</http:request-config>
+	<flow name="munitsFlow" doc:id="c46017be-602e-4656-992a-f00d961e927d" >
+		<http:listener doc:name="Listener" doc:id="dfe1a36f-f2a7-4615-9c4d-46d93892e604" config-ref="HTTP_Listener_config" path="/munits"/>
+		<set-payload value='#["Dummy"]' doc:name="Set Payload" doc:id="0a458dea-d247-4ecb-a30f-038f71727cbc" />
+		<http:request method="GET" doc:name="Request" doc:id="f462cd2f-9844-41f3-9755-7c205183a703" config-ref="HTTP_Request_configuration" path="/munit"/>
+	</flow>
+</mule>
